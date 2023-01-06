@@ -10,7 +10,7 @@ export const ContactIcon = ({children, btnColor, href}: ContactIconProps) => {
         <a
             target='_blank'
             href={href}
-            className={`h-14 w-14 btn btn-circle ${btnColor} flex justify-center items-center`}>
+            className={`btn btn-circle ${btnColor} flex justify-center items-center`}>
             {children}
         </a>
     );

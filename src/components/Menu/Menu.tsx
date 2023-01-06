@@ -1,5 +1,7 @@
-import {motion} from "framer-motion";
 import {useState} from "react";
+import {motion} from "framer-motion";
+import {Drawer} from "./";
+
 
 export const Menu = () => {
 
@@ -49,25 +51,7 @@ export const Menu = () => {
             >
                 {
                     isOpen && (
-                        <motion.ul
-                            initial={{opacity: 0, translateX: '10%'}}
-                            animate={{opacity: 1, translateX: '0%'}}
-                            transition={{delay: 0.5, ease: 'easeInOut'}}
-                            className='w-full h-full flex flex-wrap flex-col items-center justify-center gap-y-10 text-5xl md:text-7xl text-secondary-content'
-                        >
-                            <li>
-                                <a className='link' href="#!">HOME</a>
-                            </li>
-                            <li>
-                                <a className='link' href="#!">IAM</a>
-                            </li>
-                            <li>
-                                <a className='link' href="">KNOWLEDGE</a>
-                            </li>
-                            <li>
-                                <a className='link' href="">CONTACT</a>
-                            </li>
-                        </motion.ul>
+                        <Drawer handleOpen={handleOpen} />
                     )
                 }
             </motion.div>

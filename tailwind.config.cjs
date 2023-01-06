@@ -15,7 +15,8 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Lato', defaultTheme.fontFamily.sans],
-        'mono': ['Arvo', defaultTheme.fontFamily.mono]
+        'mono': ['Arvo', defaultTheme.fontFamily.mono],
+        'serif': ['Inconsolata', defaultTheme.fontFamily.serif]
       }
     },
   },
