@@ -17,6 +17,11 @@ module.exports = {
         'sans': ['Lato', defaultTheme.fontFamily.sans],
         'mono': ['Arvo', defaultTheme.fontFamily.mono],
         'serif': ['Inconsolata', defaultTheme.fontFamily.serif]
+      },
+      maxWidth: {
+        '8xl': '90rem',
+        '9xl': '96rem',
+        '10xl': '100rem'
       }
     },
   },

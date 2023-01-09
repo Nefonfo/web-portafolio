@@ -21,9 +21,9 @@ export const IAmBanner = () => {
 
 
     return (
-        <div id='iam' ref={container} className=" bg-primary h-[250vh] w-full py-32 flex flex-col items-center gap-y-16">
+        <div id='iam' ref={container} className=" bg-primary h-[200vh] w-full py-32 flex flex-col items-center gap-y-16">
             <h1 className='text-6xl md:text-9xl font-mono text-primary-content'>I AM</h1>
-            <div className='max-w-2xl lg:max-w-3xl px-6 sticky top-32 flex flex-col justify-center items-center gap-y-16'>
+            <div className='max-w-2xl lg:max-w-3xl px-6 sticky top-[10vh] flex flex-col justify-center items-center gap-y-16'>
                 <motion.img
                     src={ProfileImage}
                     alt="Profile Image"

@@ -1,4 +1,4 @@
-import {useEffect, useRef} from "react";
+import {useRef} from "react";
 import {useScroll} from "framer-motion";
 import {TranslatedWord, HiddenWord, Subtitle, ContactIcon} from "./";
 
@@ -44,7 +44,7 @@ export const PresentationBanner = () => {
     return (
         <div id='home' className='h-[150vh] w-full' ref={container}>
             {/*<ContactIcons />*/}
-            <div className='w-full sticky top-64 flex flex-col justify-center gap-y-5 py-12 md:py-24'>
+            <div className='w-full sticky top-[25vh] flex flex-col justify-center gap-y-5 py-12 md:py-24'>
                 <div className='w-full flex justify-center text-primary-content text-6xl md:text-8xl lg:text-12xl font-mono'>
                     <TranslatedWord word='N' scroll={scrollYProgress} alternate={false} />
                     <HiddenWord word='E' scroll={scrollYProgress}/>

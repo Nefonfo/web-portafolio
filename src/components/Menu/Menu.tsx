@@ -56,8 +56,8 @@ export const Menu = () => {
                 }
             </motion.div>
             <div className={`sticky top-0 flex justify-end px-3 py-5 ${isOpen ? 'z-50' : 'z-10'}`}>
-                <button onClick={handleOpen} className="w-14 h-14 btn btn-secondary rounded-full text-secondary-content">
-                    <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <button onClick={handleOpen} className="w-16 h-16 btn btn-secondary rounded-full text-secondary-content">
+                    <svg className="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                         <motion.path
                             strokeLinecap="round"
                             strokeLinejoin="round"
