@@ -1,0 +1,75 @@
+.nf-paragraph {
+    @apply relative w-full h-full;
+
+    &::before {
+        content: "";
+        background-size: 100%;
+        @apply bg-secondary absolute transition-all ease-in-out;
+    }
+
+    &.nf-right {
+        @apply pl-6;
+
+        &::before {
+            @apply left-0;
+        }
+    }
+
+    &.nf-left {
+        @apply pr-6;
+
+        &::before {
+            @apply right-0;
+        }
+    }
+
+    &.nf-bottom {
+        @apply pb-6;
+
+        &::before {
+            @apply bottom-0;
+        }
+    }
+
+    &.nf-right, &.nf-left {
+        &::before {
+            transition-duration: 1.5s;
+            @apply h-full;
+        }
+    }
+
+    &.nf-bottom {
+        &::before {
+            transition-duration: 1s;
+            @apply w-full;
+        }
+    }
+
+    &.nf-hide {
+        &.nf-right, &.nf-left {
+            &::before {
+                @apply w-full;
+            }
+        }
+
+        &.nf-bottom {
+            &::before {
+                @apply h-full;
+            }
+        }
+    }
+
+    &.nf-show {
+        &.nf-right, &.nf-left {
+            &::before {
+                @apply w-2;
+            }
+        }
+
+        &.nf-bottom {
+            &::before {
+                @apply h-3;
+            }
+        }
+    }
+}

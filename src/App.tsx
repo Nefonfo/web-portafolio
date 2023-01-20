@@ -1,20 +1,16 @@
-import {PresentationBanner} from "./components/PresentationBanner"
-import {Menu} from "./components/Menu"
-import {IAmBanner} from "./components/IAmBanner"
-import {HobbiesBanner} from "./components/HobbiesBanner";
-
-
+import {Menu} from './components'
+import {IAmSection, HobbiesSection, HomeSection} from './sections'
 
 const App = () => {
 
-    return (
-        <>
-            <Menu />
-            <PresentationBanner />
-            <IAmBanner />
-            <HobbiesBanner />
-        </>
-    )
+	return (
+		<>
+			<Menu/>
+			<HomeSection/>
+			<IAmSection/>
+			<HobbiesSection/>
+		</>
+	)
 }
 
 export default App
