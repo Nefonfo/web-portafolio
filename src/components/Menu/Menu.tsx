@@ -59,7 +59,7 @@ export const Menu = () => {
 				<button
 					aria-label="Menu Button"
 					onClick={handleOpen}
-					className="w-16 h-16 btn btn-secondary rounded-full text-secondary-content"
+					className="w-16 h-16 btn btn-secondary rounded-full shadow-md text-secondary-content"
 				>
 					<svg className="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 					     strokeWidth={1.5} stroke="currentColor">

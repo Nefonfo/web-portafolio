@@ -1,5 +1,5 @@
 import {Menu} from './components'
-import {IAmSection, HobbiesSection, HomeSection} from './sections'
+import {IAmSection, HobbiesSection, HomeSection, KnowledgeSection} from './sections'
 
 const App = () => {
 
@@ -9,6 +9,7 @@ const App = () => {
 			<HomeSection/>
 			<IAmSection/>
 			<HobbiesSection/>
+			<KnowledgeSection />
 		</>
 	)
 }

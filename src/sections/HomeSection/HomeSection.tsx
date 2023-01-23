@@ -23,7 +23,7 @@ export const HomeSection = () => {
 					<TranslatedWord word="F" scroll={scrollYProgress} alternate={true}/>
 					<HiddenWord word="O" scroll={scrollYProgress}/>
 				</div>
-				<Subtitle text="WEB DEVELOPER" scroll={scrollYProgress}/>
+				<Subtitle text="FULLSTACK DEVELOPER" scroll={scrollYProgress}/>
 			</div>
 		</div>
 	)
