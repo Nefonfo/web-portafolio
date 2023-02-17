@@ -1,5 +1,5 @@
 import {motion, MotionValue, useTransform} from 'framer-motion'
-import {useDaisyColor} from '../../hooks'
+import {useDaisyColor} from '../../../hooks'
 
 type TranslatedWordProps = {
 	word: string,

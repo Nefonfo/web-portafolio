@@ -1,8 +1,6 @@
 import {useRef} from 'react'
 import {useScroll} from 'framer-motion'
-import {HiddenWord} from './HiddenWord'
-import {Subtitle} from './Subtitle'
-import {TranslatedWord} from './TranslatedWord'
+import {HiddenWord, Subtitle, TranslatedWord} from './components'
 
 export const HomeSection = () => {
 

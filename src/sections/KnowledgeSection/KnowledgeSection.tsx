@@ -1,13 +1,14 @@
-import {useEffect, useRef, useState} from 'react'
-import {KnowledgeModal} from './KnowledgeModal'
-import {knowledgeContent} from './fixtures'
-import {KnowledgeCards} from './KnowledgeCards'
+import {ReactNode, useEffect, useRef, useState} from 'react'
 import {AnimatePresence, motion, useInView} from 'framer-motion'
+import {KnowledgeCard, KnowledgeModal, TechCard, TechCardWrapper} from './components'
+import {FrontEndSubSection} from './subsections/FrontEndSubSection'
+
 export const KnowledgeSection = () => {
 
-	const [index, saveIndex] = useState<number>(-1)
+	const [modal, saveModal] = useState<any>({open: false})
 	const ref = useRef(null)
 	const isInView = useInView(ref)
+
 	const titleVariants = {
 		hide: {
 			scale: 0
@@ -17,19 +18,18 @@ export const KnowledgeSection = () => {
 		}
 	}
 
-	useEffect(() => {
-		if(index > -1) {
-			document.body.style.overflow = "hidden"
-		} else {
-			document.body.style.overflow = "auto"
-		}
-	}, [index])
-	const openModal = (index: number) => {
-		saveIndex(index)
+	const openModal = (icon: ReactNode, name: string, description: string, children: ReactNode) => {
+		saveModal({
+			open: true,
+			icon,
+			name,
+			description,
+			children
+		})
 	}
 
 	const closeModal = () => {
-		saveIndex(-1)
+		saveModal({open: false})
 	}
 
 	return (
@@ -37,6 +37,17 @@ export const KnowledgeSection = () => {
 			id="knowledge"
 			className="bg-neutral w-full py-32 flex flex-col items-center gap-y-16"
 		>
+			{
+				modal.open &&
+					<KnowledgeModal
+						icon={modal.icon}
+						name={modal.name}
+						description={modal.description}
+						closeModal={closeModal}
+					>
+						{modal.children}
+					</KnowledgeModal>
+			}
 			<motion.h1
 				initial='hide'
 				animate={isInView ? 'show': 'hide'}
@@ -50,33 +61,9 @@ export const KnowledgeSection = () => {
 			>
 				KNOWLEDGE
 			</motion.h1>
-			<motion.div layout className="w-full flex flex-wrap justify-center items-center gap-y-8 gap-x-6 px-6 md:px-auto">
-				<AnimatePresence>
-					{
-						index > -1 && (
-
-								<KnowledgeModal
-									id={knowledgeContent[index].id}
-									icon={knowledgeContent[index].icon}
-									name={knowledgeContent[index].name}
-									content={knowledgeContent[index].content}
-									handleClose={closeModal}
-								/>
-
-						)
-					}
-				</AnimatePresence>
-				{
-					knowledgeContent
-						.map((content, index)=> (
-							<KnowledgeCards
-								key={content.id}
-								handleClick={() => openModal(index)}
-								{...content}
-							/>
-						))
-				}
-			</motion.div>
+			<div className="w-full flex flex-wrap justify-center items-center gap-y-8 gap-x-6 px-6 md:px-auto">
+				<FrontEndSubSection openModal={openModal} />
+			</div>
 		</div>
 	)
 }

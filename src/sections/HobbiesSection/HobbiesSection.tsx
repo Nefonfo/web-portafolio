@@ -3,9 +3,9 @@ import {useInView} from 'framer-motion'
 import {HobbyHero} from './HobbyHero'
 
 import AImgOriginal1 from '../../assets/images/hobbies/audiophile_1.jpg'
-import AImgOriginal2 from '../../assets/images/hobbies/audiophile_2.jpg'
+import AImgOriginal3 from '../../assets/images/hobbies/audiophile_3.jpeg'
 import AImgWebp1 from '../../assets/images/hobbies/audiophile_1.webp'
-import AImgWebp2 from '../../assets/images/hobbies/audiophile_2.webp'
+import AImgWebp3 from '../../assets/images/hobbies/audiophile_3.webp'
 import './HobbiesSection.pcss'
 
 export const HobbiesSection = () => {
@@ -33,8 +33,8 @@ export const HobbiesSection = () => {
 				alternative={false}
 			/>
 			<HobbyHero
-				original_image={AImgOriginal2}
-				webp_image={AImgWebp2}
+				original_image={AImgOriginal3}
+				webp_image={AImgWebp3}
 				alt_text="Audiophile Image 1"
 				text="I love reviewing music players, in-ear monitors and dacs!"
 				alternative={true}

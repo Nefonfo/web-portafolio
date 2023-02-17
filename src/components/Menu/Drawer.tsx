@@ -14,6 +14,10 @@ const menuLinks: Array<any> = [
 		name: 'HOBBIES',
 		link: '#hobbies',
 	},
+	{
+		name: 'KNOWLEDGE',
+		link: '#knowledge',
+	},
 ]
 
 type DrawerProps = {

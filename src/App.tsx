@@ -1,5 +1,5 @@
 import {Menu} from './components'
-import {IAmSection, HobbiesSection, HomeSection, KnowledgeSection} from './sections'
+import {HobbiesSection, HomeSection, IAmSection, KnowledgeSection} from './sections'
 
 const App = () => {
 
