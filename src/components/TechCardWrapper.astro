@@ -1,0 +1,13 @@
+---
+export interface Props {
+	sectionTitle: string;
+}
+
+const { sectionTitle } = Astro.props;
+---
+<div>
+    <h3 class="font-bold underline underline-offset-4 mb-4">{sectionTitle}</h3>
+    <div class="flex flex-wrap gap-x-10 gap-y-4">
+        <slot />
+    </div>
+</div>

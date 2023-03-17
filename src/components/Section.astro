@@ -1,0 +1,17 @@
+---
+export interface Props {
+	title: string;
+    full?: boolean
+}
+
+const { title, full = false } = Astro.props;
+---
+
+<section class="flex flex-wrap gap-y-6">
+    <div class={`${full ? 'w-full text-center': ''} bg-violet-600 py-1 px-4`}>
+        <h2 class="text-4xl md:text-6xl font-serif text-white uppercase">{title}</h2>
+    </div>
+    <div class="w-full text-xl md:text-3xl text-white flex flex-col gap-y-5">
+        <slot />
+    </div>
+</section>

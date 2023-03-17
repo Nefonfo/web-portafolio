@@ -1,0 +1,13 @@
+---
+export interface Props {
+	technologyName: string;
+}
+
+const { technologyName } = Astro.props;
+---
+<div class="flex flex-col justify-center items-center">
+    <div class="scale-100 hover:scale-125 transition-transform ease-in-out duration-300">
+        <slot />
+    </div>
+    <legend class="text-sm md:text-base">{technologyName}</legend>
+</div>
