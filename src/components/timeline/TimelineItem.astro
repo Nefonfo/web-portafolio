@@ -1,0 +1,24 @@
+---
+export interface Props {
+    position: string;
+    place: string;
+    description?: string;
+    image: string;
+    altImage: string;
+    isActual: boolean;
+    actualText?: string;
+}
+
+const {description, image, altImage, position, place, isActual , actualText} = Astro.props;
+---
+<li class="mb-10 ml-20">
+    <span class="absolute flex items-center justify-center w-20 h-20 bg-slate-900 rounded-full -left-10">
+        <img class="w-auto max-h-20" src={image} alt={altImage} />
+    </span>
+    <h3 class="mb-1 text-2xl font-semibold text-white flex flex-wrap">
+        {position}
+        { isActual && <span class="bg-violet-600 text-lg font-light md:ml-4 px-4 my-6 md:my-0 py-2">{actualText ? actualText: 'Actual Job'}</span> }
+    </h3>
+    <h5 class="block mb-2 text-lg font-normal text-gray-300">@ {place}</h5>
+    {description && <p class="text-xl font-normal text-white">{description}</p>}
+</li>
